@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Play Arena Rush</title>
+        <link rel="icon" href="img/Fevicon.png" type="image/png" />
+        <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css" />
+        <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css" />
+        <link rel="stylesheet" href="vendors/nice-select/nice-select.css" />
+        <link
+            rel="stylesheet"
+            href="vendors/owl-carousel/owl.theme.default.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="vendors/owl-carousel/owl.carousel.min.css"
+        />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+            .cookie-wrapper {
+                position: fixed;
+                bottom: 0px;
+                right: 0;
+                width: 100%;
+                background: #fff;
+                padding: 15px 25px 22px;
+                transition: right 0.3s ease;
+                box-shadow: 0 5px 10px rgb(0, 0, 0);
+                z-index: 999;
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+            }
+            .cookie-wrapper .show {
+                right: 20px;
+            }
+
+            .hidden {
+                display: none;
+            }
+            header i {
+                color: #ff7f41ff;
+                font-size: 32px;
+                text-align: center;
+            }
+            header h2 {
+                color: #ff7f41ff;
+                font-weight: 500;
+                text-align: center;
+            }
+            .data {
+                text-align: center;
+            }
+            .data p a {
+                color: #ff7f41ff;
+                text-decoration: none;
+                text-align: center !important;
+            }
+            .data p a:hover {
+                text-decoration: underline;
+            }
+            .buttons {
+                padding: 20px 0px;
+                text-align: center;
+            }
+            .buttons .cookie-button {
+                border: 2px solid #ff7f41ff;
+                color: #fff;
+                padding: 8px 0;
+                background: #ff7f41ff;
+                cursor: pointer;
+                width: calc(100% / 2 - 10px);
+                transition: all 0.2s ease;
+                max-width: 150px;
+                border-radius: 0px;
+            }
+            .buttons #acceptBtn:hover {
+                background-color: transparent;
+                color: #ff7f41ff;
+            }
+            #declineBtn {
+                background-color: #fff;
+                color: #ff7f41ff;
+                border-radius: 0;
+            }
+            #declineBtn:hover {
+                background-color: #ff7f41ff;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!--================ Start Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <a class="navbar-brand logo_h" href="index.html">
+                            <h3 style="font-size: 25px">Play Arena Rush</h3>
+                        </a>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div
+                            class="collapse navbar-collapse offset"
+                            id="navbarSupportedContent"
+                        >
+                            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li class="nav-item submenu dropdown active">
+                                    <a
+                                        href="#"
+                                        class="nav-link dropdown-toggle"
+                                        data-toggle="dropdown"
+                                        role="button"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        Store
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="shop.html"
+                                                >Game Categories</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="checkout.html"
+                                                >Checkout</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="favorite.html"
+                                                >Wishlist</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="cart.html"
+                                                >Shopping Cart</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blog.html"
+                                        >Gaming News</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html"
+                                        >Support</a
+                                    >
+                                </li>
+                            </ul>
+
+                            <ul class="nav-shop">
+                                <li class="nav-item">
+                                    <button>
+                                        <a href="cart.html">
+                                            <i class="ti-shopping-cart"></i>
+                                            <span class="nav-shop__circle"
+                                                >0</span
+                                            >
+                                        </a>
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="button button-header"
+                                        href="shop.html"
+                                        >Browse Games</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!--================ End Header Menu Area =================-->
+        <!-- Start Checkout -->
+        <section
+            class="shop checkout section py-5"
+            style="background-color: #f8f9fa"
+        >
+            <div class="container">
+                <div class="row">
+                    <!-- Checkout Form -->
+                    <div class="col-lg-8 col-12 mb-4">
+                        <div class="checkout-form p-4 shadow rounded bg-white">
+                            <h2 class="mb-3">Payment</h2>
+                            <p class="text-muted mb-4">
+                                Create an account for a faster checkout
+                                experience.
+                            </p>
+                            <!-- Form -->
+                            <form
+                                class="form"
+                                method="GET"
+                                action="thanks.html"
+                            >
+                                <div class="row">
+                                    <div class="col-lg-6 mb-3">
+                                        <label
+                                            >First Name<span class="text-danger"
+                                                >*</span
+                                            ></label
+                                        >
+                                        <input
+                                            type="text"
+                                            name="firstName"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label
+                                            >Last Name<span class="text-danger"
+                                                >*</span
+                                            ></label
+                                        >
+                                        <input
+                                            type="text"
+                                            name="lastName"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label
+                                            >Email Address<span
+                                                class="text-danger"
+                                                >*</span
+                                            ></label
+                                        >
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label
+                                            >Phone Number<span
+                                                class="text-danger"
+                                                >*</span
+                                            ></label
+                                        >
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label
+                                            >Address 1<span class="text-danger"
+                                                >*</span
+                                            ></label
+                                        >
+                                        <input
+                                            type="text"
+                                            name="address1"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label>Address 2</label>
+                                        <input
+                                            type="text"
+                                            name="address2"
+                                            class="form-control"
+                                        />
+                                    </div>
+                                </div>
+                                <!-- Button Widget -->
+                                <div class="mt-4">
+                                    <button
+                                        class="btn btn-primary btn-lg w-100"
+                                        type="submit"
+                                        data-store-el="cartEmptyDisabled"
+                                        style="
+                                            background: #002347 !important;
+                                            border-color: #002347 !important;
+                                            color: #fff;
+                                        "
+                                    >
+                                        Submit Order
+                                    </button>
+                                </div>
+                                <!--/ End Button Widget -->
+                            </form>
+                            <!--/ End Form -->
+                        </div>
+                    </div>
+
+                    <!-- Order Details -->
+                    <div class="col-lg-4 col-12">
+                        <div class="order-details p-4 shadow rounded bg-white">
+                            <!-- Order Summary -->
+                            <div class="single-widget mb-4">
+                                <h4 class="mb-3">ORDER SUMMARY</h4>
+                                <ul class="list-group">
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center"
+                                    >
+                                        Total Amount
+                                        <strong
+                                            ><span
+                                                data-store-el="cartTotal"
+                                            ></span
+                                            >$</strong
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/ End Order Summary -->
+
+                            <!-- Payment Method -->
+                            <div class="single-widget">
+                                <h4 class="mb-3">Payment Method</h4>
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        name="paymentMethod"
+                                        id="payment-cod"
+                                    />
+                                    <label
+                                        class="form-check-label"
+                                        for="payment-cod"
+                                    >
+                                        Pay on Delivery
+                                    </label>
+                                </div>
+                            </div>
+                            <!--/ End Payment Method -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Checkout -->
+
+        <!--================ Start footer Area  =================-->
+        <footer class="footer">
+            <div class="footer-area">
+                <div class="container">
+                    <div class="row section_gap">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-footer-widget tp_widgets">
+                                <h4 class="footer_title large_title">
+                                    Our Mission
+                                </h4>
+                                <p>
+                                    At Play Arena Rush, our mission is to bring
+                                    the best gaming experience to every player.
+                                    We offer top-quality digital titles for PC
+                                    and consoles at unbeatable prices.
+                                </p>
+                                <p>
+                                    We aim to be your trusted source for premium
+                                    games, delivering fast access, reliable
+                                    support, and non-stop action for gamers of
+                                    all styles and levels.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-footer-widget tp_widgets">
+                                <h4 class="footer_title">Quick Links</h4>
+                                <ul class="list">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>
+                                        <a href="cookie-policy.html"
+                                            >Cookie Policy</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="privacy-policy.html"
+                                            >Privacy Policy</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="terms-of-use.html"
+                                            >Terms of use</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-footer-widget tp_widgets">
+                                <h4 class="footer_title">Contact Us</h4>
+                                <div class="ml-40">
+                                    <p class="sm-head">
+                                        <span
+                                            class="fa fa-location-arrow"
+                                        ></span>
+                                        Head Office
+                                    </p>
+                                    <p>452 Spadina Ave., Toronto, ON M5T 2G8</p>
+
+                                    <p class="sm-head">
+                                        <span class="fa fa-phone"></span>
+                                        Phone Number
+                                    </p>
+                                    <p>+14169233066</p>
+
+                                    <p class="sm-head">
+                                        <span class="fa fa-envelope"></span>
+                                        Email
+                                    </p>
+                                    <p>play_arena_rush@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--================ End footer Area  =================-->
+
+        <!-- Cookie Banner -->
+        <div class="cookie-wrapper show">
+            <div>
+                <i class="bx bx-cookie"></i>
+                <h2 style="text-align: center">Cookie Notice</h2>
+            </div>
+            <div class="data">
+                <p>
+                    This site uses cookies to optimize your gaming experience
+                    while browsing and purchasing digital games for PC and
+                    consoles.
+                    <a href="cookie-policy.html">Learn more...</a>
+                </p>
+            </div>
+            <div class="buttons">
+                <button class="cookie-button" id="acceptBtn">I accept</button>
+                <button class="cookie-button" id="declineBtn">I decline</button>
+            </div>
+        </div>
+        <!-- End Cookie Banner -->
+
+        <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+        <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="vendors/skrollr.min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+        <script src="vendors/jquery.ajaxchimp.min.js"></script>
+        <script src="vendors/mail-script.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/cookiebanner.js"></script>
+        <script src="js/store.js"></script>
+        <script src="products.js"></script>
+    </body>
+</html>

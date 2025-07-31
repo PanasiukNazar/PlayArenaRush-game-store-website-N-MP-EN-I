@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Play Arena Rush</title>
+        <link rel="icon" href="img/Fevicon.png" type="image/png" />
+        <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css" />
+        <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css" />
+        <link rel="stylesheet" href="vendors/nice-select/nice-select.css" />
+        <link
+            rel="stylesheet"
+            href="vendors/owl-carousel/owl.theme.default.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="vendors/owl-carousel/owl.carousel.min.css"
+        />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+            .cookie-wrapper {
+                position: fixed;
+                bottom: 0px;
+                right: 0;
+                width: 100%;
+                background: #fff;
+                padding: 15px 25px 22px;
+                transition: right 0.3s ease;
+                box-shadow: 0 5px 10px rgb(0, 0, 0);
+                z-index: 999;
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+            }
+            .cookie-wrapper .show {
+                right: 20px;
+            }
+
+            .hidden {
+                display: none;
+            }
+            header i {
+                color: #ff7f41ff;
+                font-size: 32px;
+                text-align: center;
+            }
+            header h2 {
+                color: #ff7f41ff;
+                font-weight: 500;
+                text-align: center;
+            }
+            .data {
+                text-align: center;
+            }
+            .data p a {
+                color: #ff7f41ff;
+                text-decoration: none;
+                text-align: center !important;
+            }
+            .data p a:hover {
+                text-decoration: underline;
+            }
+            .buttons {
+                padding: 20px 0px;
+                text-align: center;
+            }
+            .buttons .cookie-button {
+                border: 2px solid #ff7f41ff;
+                color: #fff;
+                padding: 8px 0;
+                background: #ff7f41ff;
+                cursor: pointer;
+                width: calc(100% / 2 - 10px);
+                transition: all 0.2s ease;
+                max-width: 150px;
+                border-radius: 0px;
+            }
+            .buttons #acceptBtn:hover {
+                background-color: transparent;
+                color: #ff7f41ff;
+            }
+            #declineBtn {
+                background-color: #fff;
+                color: #ff7f41ff;
+                border-radius: 0;
+            }
+            #declineBtn:hover {
+                background-color: #ff7f41ff;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!--================ Start Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <a class="navbar-brand logo_h" href="index.html">
+                            <h3 style="font-size: 25px">Play Arena Rush</h3>
+                        </a>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div
+                            class="collapse navbar-collapse offset"
+                            id="navbarSupportedContent"
+                        >
+                            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li class="nav-item submenu dropdown">
+                                    <a
+                                        href="#"
+                                        class="nav-link dropdown-toggle"
+                                        data-toggle="dropdown"
+                                        role="button"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        Store
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="shop.html"
+                                                >Game Categories</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="checkout.html"
+                                                >Checkout</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="favorite.html"
+                                                >Wishlist</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="cart.html"
+                                                >Shopping Cart</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blog.html"
+                                        >Gaming News</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html"
+                                        >Support</a
+                                    >
+                                </li>
+                            </ul>
+
+                            <ul class="nav-shop">
+                                <li class="nav-item">
+                                    <button>
+                                        <a href="cart.html">
+                                            <i class="ti-shopping-cart"></i>
+                                            <span class="nav-shop__circle"
+                                                >0</span
+                                            >
+                                        </a>
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="button button-header"
+                                        href="shop.html"
+                                        >Browse Games</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!--================ End Header Menu Area =================-->
+        <!--================ Terms of Use Block Start =================-->
+        <main>
+            <article class="container additional-wrapper">
+                <div class="page__content" style="padding: 20px 0px">
+                    <h1>Terms of Use</h1>
+                    <h2>Introduction</h2>
+                    <p>
+                        Welcome to our online store dedicated to PC and console
+                        games. By accessing or using our platform, you agree to
+                        comply with and be bound by the following Terms of Use.
+                        Please review them carefully before making any purchases
+                        or using any of our services.
+                    </p>
+
+                    <h2>User Agreement</h2>
+                    <p>
+                        These Terms apply to all visitors, customers, and users
+                        who access or interact with our website. If you do not
+                        agree with any part of these terms, you should
+                        discontinue use of the platform immediately.
+                    </p>
+
+                    <h2>Eligibility</h2>
+                    <p>
+                        To use our online game store, you must be at least 18
+                        years old or have permission from a legal guardian. By
+                        using the site, you confirm that you meet these
+                        requirements.
+                    </p>
+
+                    <h2>Account Registration</h2>
+                    <p>
+                        Some features of the platform may require you to create
+                        an account. You are responsible for maintaining the
+                        confidentiality of your account credentials and for all
+                        activities that occur under your account.
+                    </p>
+
+                    <h2>Use of Content</h2>
+                    <p>
+                        All content on our site, including game listings,
+                        descriptions, graphics, and media, is protected by
+                        intellectual property laws. You may not copy,
+                        distribute, or exploit any part of the site without
+                        prior written permission.
+                    </p>
+
+                    <h2>Purchases and Payments</h2>
+                    <p>
+                        All purchases made through our store are subject to our
+                        payment terms. Prices are listed in your selected
+                        currency and may vary based on platform, region, and
+                        availability. We reserve the right to change prices at
+                        any time.
+                    </p>
+
+                    <h2>Game Availability</h2>
+                    <p>
+                        While we strive to provide accurate availability
+                        information, certain game titles may become unavailable
+                        or discontinued. We are not responsible for items that
+                        are out of stock or no longer supported by developers.
+                    </p>
+
+                    <h2>User Conduct</h2>
+                    <p>
+                        You agree not to misuse our platform. This includes, but
+                        is not limited to, attempting to hack, spam, defraud, or
+                        interfere with the website's functionality. We reserve
+                        the right to suspend or ban accounts engaging in such
+                        behavior.
+                    </p>
+
+                    <h2>Limitation of Liability</h2>
+                    <p>
+                        Our store is provided “as is” and we make no guarantees
+                        regarding uninterrupted access, error-free
+                        functionality, or the suitability of any games for your
+                        preferences or devices. Use at your own discretion.
+                    </p>
+
+                    <h2>Changes to Terms</h2>
+                    <p>
+                        We may update these Terms of Use at any time. Continued
+                        use of the platform after changes indicates your
+                        acceptance of the revised terms. Please check this page
+                        regularly for updates.
+                    </p>
+
+                    <h2>Contact Information</h2>
+                    <p>
+                        If you have any questions about these Terms of Use or
+                        how we operate our online store for games, please reach
+                        out to our support team. We are here to assist you.
+                    </p>
+                </div>
+            </article>
+        </main>
+        <!--================ Terms of Use Block End =================-->
+
+        <!--================ Start footer Area  =================-->
+        <footer class="footer">
+            <div class="footer-area">
+                <div class="container">
+                    <div class="row section_gap">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-footer-widget tp_widgets">
+                                <h4 class="footer_title large_title">
+                                    Our Mission
+                                </h4>
+                                <p>
+                                    At Play Arena Rush, our mission is to bring
+                                    the best gaming experience to every player.
+                                    We offer top-quality digital titles for PC
+                                    and consoles at unbeatable prices.
+                                </p>
+                                <p>
+                                    We aim to be your trusted source for premium
+                                    games, delivering fast access, reliable
+                                    support, and non-stop action for gamers of
+                                    all styles and levels.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-footer-widget tp_widgets">
+                                <h4 class="footer_title">Quick Links</h4>
+                                <ul class="list">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>
+                                        <a href="cookie-policy.html"
+                                            >Cookie Policy</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="privacy-policy.html"
+                                            >Privacy Policy</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="terms-of-use.html"
+                                            >Terms of use</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-footer-widget tp_widgets">
+                                <h4 class="footer_title">Contact Us</h4>
+                                <div class="ml-40">
+                                    <p class="sm-head">
+                                        <span
+                                            class="fa fa-location-arrow"
+                                        ></span>
+                                        Head Office
+                                    </p>
+                                    <p>452 Spadina Ave., Toronto, ON M5T 2G8</p>
+
+                                    <p class="sm-head">
+                                        <span class="fa fa-phone"></span>
+                                        Phone Number
+                                    </p>
+                                    <p>+14169233066</p>
+
+                                    <p class="sm-head">
+                                        <span class="fa fa-envelope"></span>
+                                        Email
+                                    </p>
+                                    <p>play_arena_rush@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--================ End footer Area  =================-->
+
+        <!-- Cookie Banner -->
+        <div class="cookie-wrapper show">
+            <div>
+                <i class="bx bx-cookie"></i>
+                <h2 style="text-align: center">Cookie Notice</h2>
+            </div>
+            <div class="data">
+                <p>
+                    This site uses cookies to optimize your gaming experience
+                    while browsing and purchasing digital games for PC and
+                    consoles.
+                    <a href="cookie-policy.html">Learn more...</a>
+                </p>
+            </div>
+            <div class="buttons">
+                <button class="cookie-button" id="acceptBtn">I accept</button>
+                <button class="cookie-button" id="declineBtn">I decline</button>
+            </div>
+        </div>
+        <!-- End Cookie Banner -->
+
+        <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+        <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="vendors/skrollr.min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+        <script src="vendors/jquery.ajaxchimp.min.js"></script>
+        <script src="vendors/mail-script.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/cookiebanner.js"></script>
+        <script src="js/store.js"></script>
+        <script src="products.js"></script>
+    </body>
+</html>
