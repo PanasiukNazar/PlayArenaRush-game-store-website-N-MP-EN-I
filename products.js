@@ -5,7 +5,7 @@ initStore([
     description: 'Explore a lush post-apocalyptic world filled with robotic creatures.',
     price: 69.95,
     discountPrice: 59.95,
-    image: 'assets/img/service-1.jpg',
+    image: 'img/service-1.jpg',
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ initStore([
     description: 'Join Kratos and Atreus in an epic Norse mythology adventure.',
     price: 69.95,
     discountPrice: 54.95,
-    image: 'assets/img/service-2.jpg',
+    image: 'img/service-2.jpg',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ initStore([
     description: 'Race across a stunning open-world version of Mexico with hundreds of cars.',
     price: 59.95,
     discountPrice: 49.95,
-    image: 'assets/img/service-3.jpg',
+    image: 'img/service-3.jpg',
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ initStore([
     description: 'Venture through a vast fantasy world with challenging enemies and deep lore.',
     price: 69.95,
     discountPrice: 54.95,
-    image: 'assets/img/service-4.jpg',
+    image: 'img/service-4.jpg',
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ initStore([
     description: 'Experience the classic horror game fully rebuilt for modern consoles.',
     price: 59.95,
     discountPrice: 49.95,
-    image: 'assets/img/service-5.jpg',
+    image: 'img/service-5.jpg',
   },
   {
     id: 5,
@@ -45,6 +45,6 @@ initStore([
     description: 'Enjoy fast-paced, fun kart racing with iconic Nintendo characters.',
     price: 49.95,
     discountPrice: 39.95,
-    image: 'assets/img/service-6.jpg',
+    image: 'img/service-6.jpg',
   },
 ]);
